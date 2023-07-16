@@ -7,12 +7,12 @@
         </div>
 
         <div>
-            <form action="" method="get">
+            <form action="{{ route('produto.index') }}" method="get">
                 <div class="row">
                     <div class="col-md-8 mb-2">
                         <div class="input-group">
-                            <input type="text" class="form-control" name="pesquisar" placeholder="Digite o nome">
-                            <button class="btn btn-light" type="button">Pesquisar</button>
+                            <input type="text" class="form-control" name="pesquisar" placeholder="Digite o pesquisa">
+                            <button class="btn btn-light" type="submit">Pesquisar</button>
                         </div>
                     </div>
                     <div class="col-md-4 text-md-end">
