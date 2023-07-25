@@ -23,4 +23,17 @@ class ProdutosController extends Controller
 
         return  view('pages.produtos.paginacao', compact('findProduto'));
     }
+
+    public function delete(Request $request)
+    {
+        $id = $request->id;
+        $buscaRegistro = Produto::find($id);
+
+        if ($buscaRegistro) {
+            $buscaRegistro->delete();
+            return response()->json(['success' => true]);
+        } else {
+            return response()->json(['success' => false, 'message' => 'Registro não encontrado.']);
+        }
+    }
 }

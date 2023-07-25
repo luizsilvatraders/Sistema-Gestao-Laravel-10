@@ -12,7 +12,7 @@
     @yield('styles')
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="{{ asset('css/dashboar.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="{{ asset('icones/apple-touch-icon.png') }}" sizes="180x180">
@@ -108,10 +108,18 @@
     </div>
 
     @yield('scripts')
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script src="/js/dashboard.js"></script>
+    <script src="/js/color-modes.js"></script>
+
+    {{-- BlocUI loading --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
+
+    <script src="/js/projeto.js"></script>
+
 </body>
 
 </html>
