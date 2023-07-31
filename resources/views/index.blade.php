@@ -102,7 +102,6 @@
             @include('components.navegacao')
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 @yield('content')
-                <h2>Section title</h2>
             </main>
         </div>
     </div>
@@ -114,6 +113,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script src="/js/dashboard.js"></script>
     <script src="/js/color-modes.js"></script>
+
+    {{-- inputMask --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 
     {{-- BlocUI loading --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>

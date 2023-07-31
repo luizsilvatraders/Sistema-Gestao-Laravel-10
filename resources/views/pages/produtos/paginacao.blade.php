@@ -16,7 +16,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 text-md-end">
-                        <a href="" class="btn btn-success">
+                        <a href="{{ route('cadastrar.produto') }}" class="btn btn-success">
                             Incluir Produto
                         </a>
                     </div>
