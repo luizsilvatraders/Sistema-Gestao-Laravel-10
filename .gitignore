@@ -1,3 +1,5 @@
+# Arquivos de dados do MySQL
+.docker/mysql/dbdata/
 .docker/mysql/dbdata/ib_logfile0
 .docker/mysql/dbdata/ibdata1
 .docker/mysql/dbdata/ibtmp1
