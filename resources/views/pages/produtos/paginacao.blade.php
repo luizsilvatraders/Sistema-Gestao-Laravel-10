@@ -12,7 +12,7 @@
                     <div class="col-md-8 mb-2">
                         <div class="input-group">
                             <input type="text" class="form-control" name="pesquisar" placeholder="Digite o pesquisa">
-                            <button class="btn btn-light" type="submit">Pesquisar</button>
+                            <button class="btn btn-secondary" type="submit">Pesquisar</button>
                         </div>
                     </div>
                     <div class="col-md-4 text-md-end">
@@ -41,7 +41,8 @@
                                     <td>{{ 'R$' . ' ' . number_format($produto->valor, 2, ',', '.') }}</td>
                                     <td class="text-center">
                                         <div class="btn-group" role="group">
-                                            <a href="" class="btn btn-info btn-sm">Editar</a>
+
+                                            <a href=" {{route('atualizar.produto', $produto->id) }}" class="btn btn-info btn-sm">Editar</a>
 
                                             <meta name='csrf-token' content="{{ csrf_token() }}"/>
                                             <a onclick="deleteRegistroPaginacao('{{ route('produto.delete') }}', {{ $produto->id }})"
