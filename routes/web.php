@@ -48,3 +48,12 @@ route::prefix('clientes')->group(function() {
 
     route::delete('/delete', [ClientesController::class, 'delete'])->name('cliente.delete');
 });
+
+route::prefix('vendas')->group(function() {
+
+    route::get('/', [ClientesController::class, 'index'])->name('vendas.index');
+
+    //Cadastro Create
+    route::post('/cadastrarVenda', [ClientesController::class, 'cadastrarVenda'])->name('cadastrar.venda');
+    route::get('/cadastrarVenda', [ClientesController::class, 'cadastrarVenda'])->name('cadastrar.venda');
+});

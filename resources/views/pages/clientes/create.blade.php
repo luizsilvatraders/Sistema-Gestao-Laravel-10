@@ -43,12 +43,12 @@
                 is-invalid
             @enderror" name="endereco">
 
-            @if ($errors->has('logradouro'))
-                <div class="invalid-feedback">{{ $errors->first('logradouro')}}</div>
+            @if ($errors->has('endereco'))
+                <div class="invalid-feedback">{{ $errors->first('endereco')}}</div>
             @endif
         </div>
         <div class="mb-3">
-            <label for="logradouro" class="form-label">Logradouro</label>
+            <label for="logradouro" class="form-label">Cidade</label>
             <input id="logradouro" value="{{ old('logradouro') }}" class="form-control @error('logradouro')
                 is-invalid
             @enderror" name="logradouro">

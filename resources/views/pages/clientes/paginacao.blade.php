@@ -31,8 +31,8 @@
                             <tr>
                                 <th>Nome</th>
                                 <th>E-mail</th>
+                                <th>Cidade</th>
                                 <th>Endereço</th>
-                                <th>Logradouro</th>
                                 <th>Cep</th>
                                 <th>Bairro</th>
                                 <th class="text-center">Ações</th>

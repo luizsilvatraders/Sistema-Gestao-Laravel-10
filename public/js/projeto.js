@@ -39,9 +39,9 @@ $("#cep").blur(function () {
             $("#endereco").val(" ");
             $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function (dados) {
                 if (!("erro" in dados)) {
-                    $("#logradouro").val(dados.logradouro.toUpperCase());
+                    $("#logradouro").val(dados.localidade.toUpperCase());
                     $("#bairro").val(dados.bairro.toUpperCase());
-                    $("#endereco").val(dados.localidade.toUpperCase());
+                    $("#endereco").val(dados.logradouro.toUpperCase());
                 }
                 else {
                     alert("CEP não encontrado de forma automatizado digite manualmente ou tente novamente.");

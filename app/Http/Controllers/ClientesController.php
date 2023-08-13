@@ -60,13 +60,11 @@ class ClientesController extends Controller
 
             //atualiza dados no banco
             $data = $request->all();
-            $componentes = new componentes();
-            $data['valor'] = $componentes->formatacaoMascaraDinheiroDecimal($data['valor']);
 
             $buscaRegistro = Cliente::find($id);
             $buscaRegistro->update($data);
 
-            return redirect()->route('produto.index');
+            return redirect()->route('clientes.index');
         }
         //pagina atuliza
         $findCliente = Cliente::where('id', '=', $id)->first();
