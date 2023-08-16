@@ -25,5 +25,13 @@ class VendasSeeder extends Seeder
                 'cliente_id' => 7
             ]
         );
+
+        Venda::create(
+            [
+                'numero_da_venda' => 2,
+                'produto_id' => 5,
+                'cliente_id' => 8
+            ]
+        );
     }
 }

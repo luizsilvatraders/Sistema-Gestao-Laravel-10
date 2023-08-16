@@ -22,3 +22,9 @@ return new class extends Migration
         Schema::dropIfExists('vendas');
     }
 };
+/*
+Query seleciona quantidade de vendas de cada cliente e cada produto
+
+SELECT tabela_vendas.cliente_id, tabela_vendas.produto_id, COUNT(*) AS quantidade_vendas FROM vendas AS tabela_vendas GROUP BY tabela_vendas.cliente_id, tabela_vendas.produto_id;
+
+*/

@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\ProdutosController;
+use App\Http\Controllers\VendaController;
+use App\Models\Venda;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,9 +53,10 @@ route::prefix('clientes')->group(function() {
 
 route::prefix('vendas')->group(function() {
 
-    route::get('/', [ClientesController::class, 'index'])->name('vendas.index');
+    route::get('/', [VendaController::class, 'index'])->name('vendas.index');
 
     //Cadastro Create
-    route::post('/cadastrarVenda', [ClientesController::class, 'cadastrarVenda'])->name('cadastrar.venda');
-    route::get('/cadastrarVenda', [ClientesController::class, 'cadastrarVenda'])->name('cadastrar.venda');
+    route::post('/cadastrarVenda', [VendaController::class, 'cadastrarVendas'])->name('cadastrar.venda');
+    route::get('/cadastrarVenda', [VendaController::class, 'cadastrarVendas'])->name('cadastrar.venda');
+    route::get('/enviarComprovantePorEmail/{id}', [VendaController::class, 'enviarComprovantePorEmail'])->name('enviarComprovantePorEmail.venda');
 });
