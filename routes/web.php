@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\DashbordController;
 use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\VendaController;
 use App\Models\Venda;
@@ -17,9 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+route::prefix('dashboard')->group(function() {
+    route::get('/', [DashbordController::class, 'index'])->name('dashboard.index');
 });
+
+
 
 route::prefix('produtos')->group(function() {
 
